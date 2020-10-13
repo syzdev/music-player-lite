@@ -93,6 +93,8 @@ var app = new Vue({
       },
       // 播放mv
       playMV:function(mvid) {
+        // 暂停音乐的播放
+        this.musicUrl = "";
         var that = this;
         axios.get("https://autumnfish.cn/mv/url?id=" + mvid).then(
           function(response) {
